@@ -1,6 +1,10 @@
-import java.sql.SQLOutput;
 
-void main(String[] args) {
+import java.util.Scanner;
+import funcionarios.Trabalhadores;
+
+public static void main(String[] args) {
+
+
 //    String product1 = "Computer";
 //    String product2 = "Office desk";
 //
@@ -59,7 +63,49 @@ void main(String[] args) {
 //        System.out.println("Estes numeros não sao multiplos fdp");
 //    }
 // }
-    }
+//
+//    Locale.setDefault(Locale.US);
+//    Scanner sc = new Scanner(System.in);
+//
+//    Product product = new Product();
+//
+//    System.out.println("Por favor insira algo que eu esqueci: ");
+//    System.out.println("Name ");
+//    product.name = sc.nextLine();
+//
+//    System.out.print("Price ");
+//    product.price = sc.nextDouble();
+//
+//    System.out.println("A quantidade no estoque");
+//    product.quantity = sc.nextInt();
+//
+//
+//    //Este print está saindo certinho assim por conta do toString() dentro de Product.java
+//    System.out.println("Product data: " + product);
+//
+//    sc.close();
+
+    Scanner sc = new Scanner(System.in);
+
+
+    System.out.println("Por favor insira o seu salário: ");
+    Trabalhadores trabalhadores = new Trabalhadores(); // na hora de fazer isso tem que criar com o nome da classe, se não da merda.
+
+    System.out.println("Nome: ");
+    trabalhadores.nome = sc.nextLine();
+
+    System.out.println("Insira o salário: ");
+    trabalhadores.salario_bruto = sc.nextDouble();
+
+    System.out.println("Insira a taxa: ");
+    trabalhadores.taxa = sc.nextDouble();
+
+    double novaTaxa = sc.nextDouble();
+    System.out.println("Por favor insira a noxa taxa: ");
+    trabalhadores.aplicarNovaTaxa(novaTaxa);
+
+    System.out.println(trabalhadores.novoSalario());
+}
 
 
 
