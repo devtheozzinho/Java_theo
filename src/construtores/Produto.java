@@ -41,7 +41,6 @@ public class Produto {
         product.setPrice(1200.00);
         System.out.println("get price" + product.getPrice());
         System.out.println();
-        product.setQuantity(10);
         sc.close();
     }
 }
